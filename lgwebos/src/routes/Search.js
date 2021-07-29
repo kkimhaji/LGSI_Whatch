@@ -75,7 +75,9 @@ class Search extends React.Component {
             <div>
               <div className="input_div">
                 <input className="input_search" type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search for a movie."/>
-                <Button><button type="submit"><img className={css.test} src="https://image.flaticon.com/icons/png/64/483/483356.png"></img></button></Button>
+                <Button type="submit">
+                    <img className={css.test} src="https://image.flaticon.com/icons/png/64/483/483356.png"></img>
+                    </Button>
               </div>
               <div className="movies">
                 {movies.map(movie => (<SearchMovie key={movie.link} id={movie.link} year={movie.pubDate} title={movie.title} poster={movie.image} rating={movie.userRating} director={movie.director} actor={movie.actor}/>))}
