@@ -31,8 +31,8 @@ const AppBase = kind({
 					<div className={css.search}>
 						<HashRouter>
 							<Navigation />
-							<Route path="/" component={Home}/>
 							<Route path="/" component={Search}/>
+							<Route path="/" component={Home}/>
 						</HashRouter>
 					</div>
 					

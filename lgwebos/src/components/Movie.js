@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import "./Movie.css";
 
 function Movie({id, year, title, summary, poster, genres, rating}) {
+  console.log(id)
   return (
     <div className="movie">
     <Link to={{
