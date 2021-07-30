@@ -3,7 +3,7 @@ import axios from 'axios';
 import SearchMovie from '../components/SearchMovie';
 import "./Home.css";
 import "./Search.css";
-import {naverMoviesApi} from '../api';
+import { naverMoviesApi } from '../api';
 import Button from '@enact/ui/Button';
 
 import css from '../App/App.module.less'
@@ -23,22 +23,22 @@ class Search extends React.Component {
 
     try {
       if (search === "") {
-        this.setState({movies: [], isLoading: false})
+        this.setState({ movies: [], isLoading: false })
       } else {
-        const {data: {
-            items
-          }} = await axios.get('/v1/search/movie.json', {
-            params:{
-              query: search,
-              display: 20
-            },
-            headers: {
-              'X-Naver-Client-id': ID_KEY,
-              'X-Naver-Client-Secret': SECRET_KEY
-            }
-          });
+        const { data: {
+          items
+        } } = await axios.get('/v1/search/movie.json', {
+          params: {
+            query: search,
+            display: 20
+          },
+          headers: {
+            'X-Naver-Client-id': ID_KEY,
+            'X-Naver-Client-Secret': SECRET_KEY
+          }
+        });
 
-        this.setState({movies: items, isLoading: false})
+        this.setState({ movies: items, isLoading: false })
       }
     } catch (error) {
       console.log(error);
@@ -52,7 +52,7 @@ class Search extends React.Component {
 
   handleChange = (e) => {
     //console.log(e.type + ":", e.target.value);
-    this.setState({value: e.target.value});
+    this.setState({ value: e.target.value });
   };
 
   handleSubmit = (e) => {
@@ -63,7 +63,7 @@ class Search extends React.Component {
   };
 
   render() {
-    const {movies, isLoading} = this.state;
+    const { movies, isLoading } = this.state;
 
     return (<section className="container">
       {
@@ -72,14 +72,12 @@ class Search extends React.Component {
             <span className="loader__text">Loading..{this.state.name}</span>
           </div>)
           : (<form onSubmit={this.handleSubmit}>
-            <div>
-              <div className="input_div">
-                <input className="input_search" type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search for a movie."/>
-                <Button><button type="submit"><img className={css.test} src="https://image.flaticon.com/icons/png/64/483/483356.png"></img></button></Button>
-              </div>
-              <div className="movies">
-                {movies.map(movie => (<SearchMovie key={movie.link} id={movie.link} year={movie.pubDate} title={movie.title} poster={movie.image} rating={movie.userRating} director={movie.director} actor={movie.actor}/>))}
-              </div>
+
+            <input className="input_search" type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search for a movie." />
+            <button type="submit"><img className={css.test} src="https://image.flaticon.com/icons/png/64/483/483356.png"></img></button>
+
+            <div className="movies">
+              {movies.map(movie => (<SearchMovie key={movie.link} id={movie.link} year={movie.pubDate} title={movie.title} poster={movie.image} rating={movie.userRating} director={movie.director} actor={movie.actor} />))}
             </div>
           </form>)
       }
