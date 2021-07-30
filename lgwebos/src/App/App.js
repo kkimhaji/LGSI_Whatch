@@ -11,6 +11,7 @@ import Navigation from "../components/Navigation";
 
 import css from './App.module.less'
 
+import Background from './logo.png';
 
 const AppBase = kind({
 	name: 'App',
@@ -26,7 +27,10 @@ const AppBase = kind({
 				
 				<div className = {css.color}>
 					<center>
-						<h2 className={css.whatch}>Whatch</h2>
+					<div className={css.boxh} style={{ backgroundImage: "url(" + `${ Background }` + ")" }}>
+						{/* <h2 className={css.whatch}>Whatch</h2> */}
+    				</div>
+						
 					<div className={css.search}>
 						<HashRouter>
 							<Navigation />
