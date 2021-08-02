@@ -1,12 +1,10 @@
 import kind from '@enact/core/kind';
 import ThemeDecorator from '@enact/sandstone/ThemeDecorator';
 import Scroller from '@enact/sandstone/Scroller';
-// import Scroller from '@enact/ui/Scroller';
 import Button from '@enact/ui/Button';
 
 import {HashRouter, Route, Switch} from 'react-router-dom';
 import Home from "../routes/Home";
-import Search from "../routes/Search";
 import Navigation from "../components/Navigation";
 import Detail from "../routes/Detail";
 

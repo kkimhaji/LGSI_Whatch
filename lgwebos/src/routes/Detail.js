@@ -1,5 +1,6 @@
 import React from 'react';
 import './Detail.css';
+import Carousel, {media_type, id} from '../components/Carousel/Carousel';
 
 export const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
@@ -31,9 +32,11 @@ class Detail extends React.Component {
                                 <img className="star" src="https://image.flaticon.com/icons/png/512/2107/2107957.png"></img>
                                 {location.state.vote_average}
                             </ul>
-                            <h5>ㅣ {location.state.genre_ids[0]} ㅣ </h5>//if문 써보기
+                            {/*<h5>ㅣ {location.state.genre_ids } ㅣ </h5>*/}
                             <h5>{location.state.release_date}</h5>
                             <h5>{location.state.overview}</h5>
+
+                            <Carousel media_type={media_type} id={id}/>
                         </div>
                     </td>
                 </tr>

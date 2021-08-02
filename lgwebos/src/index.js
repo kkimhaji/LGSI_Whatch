@@ -1,5 +1,6 @@
 import {render} from 'react-dom';
 import App from './App/App';
+import "react-alice-carousel/lib/alice-carousel.css";
 
 const appElement = (<App />);
 
