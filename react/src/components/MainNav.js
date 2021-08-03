@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     width: "100%",
     position: "fixed",
     bottom: 0,
-    backgroundColor: "#2d313a",
+    backgroundColor: "#3F6ABF",
     zIndex: 100,
   },
 });
@@ -45,22 +45,27 @@ export default function SimpleBottomNavigation() {
       className={classes.root}
     >
       <BottomNavigationAction
-        style={{ color: "white" }}
+        style={{ color: "White" }}
         label="Trending"
         icon={<WhatshotIcon />}
       />
       <BottomNavigationAction
-        style={{ color: "white" }}
+        style={{ color: "White" }}
         label="Movies"
         icon={<MovieIcon />}
       />
       <BottomNavigationAction
-        style={{ color: "white" }}
+        style={{ color: "White" }}
         label="TV Series"
         icon={<TvIcon />}
       />
       <BottomNavigationAction
-        style={{ color: "white" }}
+        style={{ color: "White" }}
+        label="Netflix"
+        icon={<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABDUlEQVRIie2Rz0rCQRSFv9M/y2hbIAiS0LJNO6lN0CowX8AndBtulHRRuPAJIiGKIKJFIG2K7LZwoGuoP6S79MDAPXOZ892ZgaUypHlNM6sC28l+AG1Jw9S7ASqpdy3pZFrGSsYAdVfngAPnK64+nhWQBTgHNpwvmdlqxpmFAFvAofPrQDESAFBj8q/K0YB9oOD8rpntRAIATqdAQwFnQP4P4CsSsAYcOb8JXEUCAC4Ac74bDSgAT84/As+RAIA7V38Dl6EASS/A0G31mXy2/wGSBq5+B3rRgHtg5HwrFCDpE3hwWwPgLQLgQ28ZfzKMb9OcOdC8RDPrpOAO0JT06np5YC+toqTGAsMu9asfL1I519kObpkAAAAASUVORK5CYII="></img>}
+      />
+      <BottomNavigationAction
+        style={{ color: "White" }}
         label="Search"
         icon={<SearchIcon />}
       />

@@ -41,7 +41,7 @@ const Movies = () => {
       />
       <div className="trending">
         {content &&
-          content.map((c) => (
+          ontent.map((c) => (
             <SingleContent
               key={c.id}
               id={c.id}
