@@ -46,7 +46,7 @@ class Detail extends React.Component {
                                         <h5>{location.state.release_date}</h5>
                                         <h5 className="bottom">{location.state.overview}</h5>
 
-                                        <h4>Cast</h4>
+                                        <h4 className="detail-h4">Cast</h4>
                                         <div class="box">
                                             <div id="tab">
                                                 <ul className="actor_tab">

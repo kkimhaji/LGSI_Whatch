@@ -71,6 +71,12 @@ header {
   margin: 0;
 }
 
+.movie-h5 .movie-h6 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-left: 5%;
+}
+
 /* 영화 설명글 */
 .movie-over {
   background-color: white;
