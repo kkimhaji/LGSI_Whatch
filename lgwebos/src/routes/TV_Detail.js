@@ -19,6 +19,7 @@ class Detail extends React.Component {
 
         if (location.state) {
         return (
+            <div>
         <div className="movie__detail">
             <table>
                 <tr>
@@ -48,8 +49,11 @@ class Detail extends React.Component {
                     </td>
                 </tr>
             </table>
-            <Recommand id={location.state.id} params={"tv"}/>
-        </div>);
+        </div>
+        <Recommand id={location.state.id} params={"tv"}/>
+
+        </div>
+        );
 
 
         } else {
