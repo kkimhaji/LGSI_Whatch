@@ -60,7 +60,7 @@ class Detail extends React.Component {
                         </table>
                     </div>
                     
-                    <Recommand id={location.state.id} />
+                    <Recommand id={location.state.id} params={"movie"} />
                 </div>);
 
 

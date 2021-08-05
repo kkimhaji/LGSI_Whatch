@@ -1,6 +1,7 @@
 import React from 'react';
 import './Detail.css';
 import Cast from '../components/Cast';
+import Recommand from '../components/Recommand';
 
 export const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
@@ -47,6 +48,7 @@ class Detail extends React.Component {
                     </td>
                 </tr>
             </table>
+            <Recommand id={location.state.id} params={"tv"}/>
         </div>);
 
 
